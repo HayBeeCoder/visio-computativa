@@ -1,0 +1,14 @@
+import numpy as np
+import cv2
+
+original_image = cv2.imread("colored_car.jpg", cv2.IMREAD_COLOR)
+
+kernel = np.ones((5,5)) / 25
+
+blur_image = cv2.filter2D(original_image, -1, kernel)
+
+cv2.imshow("Original", original_image)
+cv2.imshow("Blur", blur_image)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
