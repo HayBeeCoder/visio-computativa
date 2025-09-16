@@ -5,7 +5,7 @@ original_image = cv2.imread('colored_car.jpg', cv2.IMREAD_COLOR)
 gray_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 
 '''
-# Laplacian kernel
+# Laplacian kernel for edge detection
 kernel = np.array([[0,1,0],[1,-4,1],[0,1,0]])
 
 # -1 is the destination depth
